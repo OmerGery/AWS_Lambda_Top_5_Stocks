@@ -1,4 +1,4 @@
-# A Lambda function to get the top 5 stocks of the day.
+# A Lambda API function to get the top 5 stocks of the day.
 
 A simple backend (read/write to DynamoDB) with a RESTful API endpoint using Amazon API Gateway.
 
