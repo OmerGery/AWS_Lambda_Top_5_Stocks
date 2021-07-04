@@ -8,4 +8,4 @@ The Lambda function gets NIFTY50 stocks data from the free API : https://rapidap
 
 By Analyzing the json file it returns the top 5 stocks ordered, with their precentage change of today.
 
-### The Lambda API is live here: https://5hpqt52l40.execute-api.us-east-1.amazonaws.com/default/dataLambda
+### The Lambda API is live on AWS here: https://5hpqt52l40.execute-api.us-east-1.amazonaws.com/default/dataLambda
