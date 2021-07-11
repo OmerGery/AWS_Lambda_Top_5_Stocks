@@ -19,8 +19,8 @@ def getStockData():
         if i==0:
             i += 1
             continue
-        result_top5 += "{'identifier': '" + stock["identifier"] + "', "
-        result_top5 += "'pChange': " + str(stock["pChange"]) + "}"
+        result_top5 += "{\"identifier\": \"" + stock["identifier"] + "\", "
+        result_top5 += "\"pChange\": " + str(stock["pChange"]) + "}"
         if(i == STOCKS_AMOUNT):
             break
         result_top5 += " ,"
