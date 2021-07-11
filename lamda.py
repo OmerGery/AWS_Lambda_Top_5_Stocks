@@ -13,21 +13,21 @@ def getStockData():
     }
 
     all_stocks = json.loads(requests.request("GET", url, headers=headers, params=querystring).text)
-    result_top5 = ""
+    result_top5 = "["
     i = 0
     for stock in all_stocks:
         if i==0:
             i += 1
             continue
-        if i==STOCKS_AMOUNT+1:
+        result_top5 += "{'identifier': '" + stock["identifier"] + "', "
+        result_top5 += "'pChange': " + str(stock["pChange"]) + "}"
+        if(i == STOCKS_AMOUNT):
             break
-        result_top5 += stock["identifier"] + " " + str(stock["pChange"]) + "\n"
-        # result_top5 += " pChange:"
-        # precent_up = stock["pChange"]
-        # result_top5 += str(4)
+        result_top5 += " ,"
         i += 1
-
+    result_top5 += "]"
     return result_top5
+getStockData()
 
 def lambda_handler(event, context):
     string = getStockData()
